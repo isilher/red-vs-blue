@@ -63,6 +63,7 @@
 		9E5BC82E20AA2719DFFD6550 /* libPods-RedVSBlue2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RedVSBlue2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A597C2BC8A324E1961BACC77 /* Pods-RedVSBlue2-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedVSBlue2-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RedVSBlue2-tvOSTests/Pods-RedVSBlue2-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A95AC640A748536BCB320F24 /* Pods-RedVSBlue2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedVSBlue2.debug.xcconfig"; path = "Target Support Files/Pods-RedVSBlue2/Pods-RedVSBlue2.debug.xcconfig"; sourceTree = "<group>"; };
+		D583468024BFAAD9004F06AD /* rnuc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = rnuc.xcconfig; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F87C3BAA4B133955097C74CD /* libPods-RedVSBlue2-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RedVSBlue2-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +160,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D583468024BFAAD9004F06AD /* rnuc.xcconfig */,
 				13B07FAE1A68108700A75B9A /* RedVSBlue2 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RedVSBlue2Tests */,
@@ -194,7 +196,6 @@
 				42A9CC378985C6C3C2049C5D /* Pods-RedVSBlue2-tvOSTests.debug.xcconfig */,
 				A597C2BC8A324E1961BACC77 /* Pods-RedVSBlue2-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -805,6 +806,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D583468024BFAAD9004F06AD /* rnuc.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -865,6 +867,7 @@
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D583468024BFAAD9004F06AD /* rnuc.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
