@@ -18,19 +18,29 @@ yarn ios:blue
 
 To get:
 
-![screenshot](screenshot.png)
+![screenshot](screenshot_ios.png)
+
+``` shell
+yarn android:red
+yarn android:blue
+```
+
+To get:
+
+![screenshot](screenshot_android.png)
 
 ## Approach
 
-The demo setup was achieved using the folling steps.
+The demo setup was achieved using the following steps.
 
 1. React native init.
-2. Add and configure [react-native-ultimate-config](https://github.com/maxkomarychev/react-native-ultimate-config). (Their comprehensive documentation is amazing 🤩)
-3. Set up `.env` files for each white label. I chose RED (`.env.red`) and BLUE (`.env.blue`).*
-4. Set the environment variables for the app name, unique identifier and icon names (you can check the commits to see the exact approach).
-5. (optional) Add yarn scripts to switch env file and run the correct build.
+1. Add and configure [react-native-ultimate-config](https://github.com/maxkomarychev/react-native-ultimate-config). (Their comprehensive documentation is amazing 🤩)
+1. Set up `.env` files for each white label. I chose RED (`.env.red`) and BLUE (`.env.blue`).
+1. Set the environment variables for the app name and unique identifier and icon names.
+1. (optional) Set up asset folders for each white label and add [a hook script](.rnucrc.js) to copy the content into the `res` and `xcimages` folders when switching env files.
+1. (optional) Add yarn scripts to switch env file and run the correct build.
 
-\* I chose to keep a default config (`.env`) as a fallback but on hindsight that wasn't necessary.
+For a more detailed explanation you can check the commits of this project. They follow the above steps, starting with a common asset pool and then extracting them into separate folders as suggested in step 5.
 
 ## When to choose this approach
 
@@ -39,8 +49,9 @@ The demo setup was achieved using the folling steps.
 
 ## When NOT to choose this approach
 
-- When you have to run a LOT of white label versions, you may want a setup that has a stricter separation between assets.
-- When you want the white label versions to have differences beyond theme variables and feature flags. For example when different white labels will have different dependencies, you may be better off splitting into XCode targets/schemes and Android flavors. There is [experimental support](https://github.com/maxkomarychev/react-native-ultimate-config/blob/master/docs/cookbook.md) for this in react-native-ultimate-config if you still want to try to use it.
+When you want the white label versions to have differences beyond theme variables and feature flags. For example when different white labels will have different dependencies, you may be better off splitting into XCode targets/schemes and Android flavors. This is outside the scope of my research. There is [experimental support](https://github.com/maxkomarychev/react-native-ultimate-config/blob/master/docs/cookbook.md) for flavors and schemes in react-native-ultimate-config, but since these functionalities are intertwined within the build process it will probably never be completely supported.
+
+In my personal opinion you would probably be better off splitting your project into separate apps that use common functionality through shared libraries in those cases.
 
 ## Gotcha's
 
