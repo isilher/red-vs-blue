@@ -1,5 +1,5 @@
 APP_NAME=RED
+RES_ID=red
 PRODUCT_BUNDLE_IDENTIFIER=com.redvsblue.red
 MAIN_COLOR=#970F05
 ICON_SET_NAME=AppIcon-red
-IC_LAUNCHER=ic_launcher_red
