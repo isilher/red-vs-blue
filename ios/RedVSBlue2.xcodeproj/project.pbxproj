@@ -654,7 +654,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A95AC640A748536BCB320F24 /* Pods-RedVSBlue2.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ICON_SET_NAME)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -677,7 +677,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CE72A3D5E5237F3E3F562BB /* Pods-RedVSBlue2.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ICON_SET_NAME)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = RedVSBlue2/Info.plist;
