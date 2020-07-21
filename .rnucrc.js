@@ -3,8 +3,8 @@ var ncp = require('ncp').ncp;
 module.exports = {
   on_env: async function (env) {
     // Copy Android res folder
-    const resSourceFolder = `./android/app/src/${env.RES_ID}/`;
-    const resDestFolder = "./android/app/src/main/";
+    const resSourceFolder = `./assets/android/${env.WHITE_LABEL_ID}/res/`;
+    const resDestFolder = "./android/app/src/main/res/";
     ncp(
       resSourceFolder,
       resDestFolder,
@@ -16,7 +16,7 @@ module.exports = {
       })
 
     // Copy iOS icon set
-    const xcassetsSourceFolder = `./ios/RedVSBlue2/Images.xcassets/${env.ICON_SET_NAME}.appiconset/`;
+    const xcassetsSourceFolder = `./assets/ios/${env.WHITE_LABEL_ID}/AppIcon.appiconset/`;
     const xcassetsDestFolder = './ios/RedVSBlue2/Images.xcassets/AppIcon.appiconset/';
     ncp(xcassetsSourceFolder, xcassetsDestFolder, (err) => {
       if (err) {
