@@ -60,3 +60,5 @@ buck-out/
 
 # react-native-ultimate-config
 rnuc.xcconfig
+/android/app/src/main/res/mipmap-*/*
+/ios/RedVSBlue2/Images.xcassets/AppIcon.appiconset/*
